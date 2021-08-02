@@ -43,6 +43,17 @@ public class listaEncadeada<T> {
         return noRetorno;
     }
 
+    public T remove(int index){
+        No<T> noTarget = this.getNo(index);
+        if (index == 0){ // Se estou com o índice igual a zero, quer dizer que esta removendo o primeiro nó(índice 0)...
+            referenciaEntrada = noTarget.getProximoNo();
+            return noTarget.getConteudo();
+        }
+        No<T> noAnterior = getNo(index -1);
+        noAnterior.setProximoNo(noTarget.getProximoNo());
+        return noTarget.getConteudo();
+    }
+
     public int size(){ // Método responsável por retornar o tamanho da lista...
         int tamanhoLista = 0;
         No<T> referenciaAux = referenciaEntrada;
