@@ -1,10 +1,10 @@
 package com.github.maicmiller;
 
-public class listaEncadeada<T> {
+public class ListaEncadeada<T> {
 
     No<T> referenciaEntrada;
 
-    public listaEncadeada() {
+    public ListaEncadeada() {
         this.referenciaEntrada = null;
     }
 
@@ -36,7 +36,7 @@ public class listaEncadeada<T> {
         No<T> noAuxiliar = referenciaEntrada;
         No<T> noRetorno = null;
 
-        for(int i = 0; i < this.size(); i++){
+        for(int i = 0; i <= index ; i++){
             noRetorno = noAuxiliar;
             noAuxiliar = noAuxiliar.getProximoNo();
         }
