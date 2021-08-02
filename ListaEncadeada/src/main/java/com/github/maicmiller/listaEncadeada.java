@@ -25,6 +25,10 @@ public class listaEncadeada<T> {
 
     }
 
+    public T get(int index){ // Passando o índice do nó que queremos pegar a informação como parâmetro...
+        return getNo(index).getConteudo();
+    }
+
     private No<T> getNo(int index){
 
         validaIndice(index);
